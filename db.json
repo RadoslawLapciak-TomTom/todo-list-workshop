@@ -1,11 +1,6 @@
 {
   "toDos": [
     {
-      "id": 1,
-      "content": "Example To Do list item",
-      "finished": false
-    },
-    {
       "content": "test",
       "finished": false,
       "id": 2
@@ -24,6 +19,16 @@
       "content": "test 2",
       "finished": false,
       "id": 5
+    },
+    {
+      "content": "test",
+      "finished": false,
+      "id": 6
+    },
+    {
+      "content": "example",
+      "finished": false,
+      "id": 7
     }
   ]
 }

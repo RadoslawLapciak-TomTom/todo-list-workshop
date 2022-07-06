@@ -1,5 +1,5 @@
 import { ChangeEventHandler, useState } from 'react';
-import { apiClint } from '../../../core/api/apiClient';
+import { apiClient } from '../../../core/api/apiClient';
 import { ToDo } from '../../../core/domain/todos.types';
 import { EditMode } from './EditMode';
 import { ItemContainer } from './ToDoItem.style';
@@ -14,11 +14,13 @@ export const ToDoItem = ({ toDo, refresh }: Props) => {
   const [editMode, setEditMode] = useState(false);
 
   const handleDelete = () => {
-    apiClint.deleteToDo(toDo.id).then(refresh);
+    apiClient.deleteToDo(toDo.id).then(refresh);
   };
 
   const handleChangeFinished: ChangeEventHandler<HTMLInputElement> = (ev) => {
-    apiClint.updateToDo({ ...toDo, finished: ev.target.checked }).then(refresh);
+    apiClient
+      .updateToDo({ ...toDo, finished: ev.target.checked })
+      .then(refresh);
     ev.stopPropagation();
   };
 

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { apiClint } from '../../core/api/apiClient';
+import { apiClient } from '../../core/api/apiClient';
 import { ToDos } from '../../core/domain/todos.types';
 import { ActiveFilterStatus } from './toDos.types';
 
@@ -27,7 +27,7 @@ export const useToDos = ({ filterByContent, filterByStatus }: Params) => {
   const [filteredToDos, setFilteredToDos] = useState<ToDos>([]);
 
   const getAllToDos = useCallback(() => {
-    apiClint
+    apiClient
       .fetchAllToDos(filterByFinished(filterByStatus))
       .then((data) => setAllToDos(data));
   }, [filterByStatus]);

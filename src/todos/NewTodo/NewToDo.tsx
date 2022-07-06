@@ -1,5 +1,5 @@
 import { ChangeEventHandler, useState } from 'react';
-import { apiClint } from '../../core/api/apiClient';
+import { apiClient } from '../../core/api/apiClient';
 import styled from 'styled-components';
 
 interface Props {
@@ -15,7 +15,7 @@ const BaseNewToDo = ({ refresh, className }: Props) => {
   };
 
   const handleSave = () => {
-    apiClint
+    apiClient
       .addToDo({ content: value, finished: false })
       .then(refresh)
       .then(() => setValue(''));

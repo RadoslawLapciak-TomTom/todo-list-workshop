@@ -9,6 +9,7 @@ import { useToDos } from './useToDos';
 export const ToDos = () => {
   const [filterByStatus, setFilterByStatus] =
     useState<ActiveFilterStatus>('ALL');
+
   const [filterByContent, setFilterByContent] = useState('');
 
   const { toDos, refresh } = useToDos({ filterByContent, filterByStatus });

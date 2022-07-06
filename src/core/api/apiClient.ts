@@ -13,7 +13,7 @@ const jsonFetch = async (url: string, init?: RequestInit | undefined) => {
   });
 };
 
-export const apiClint = {
+export const apiClient = {
   fetchAllToDos: async (
     finished: boolean | undefined,
   ): Promise<ToDosResponse> => {

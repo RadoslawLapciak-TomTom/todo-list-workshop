@@ -1,5 +1,5 @@
 import { ChangeEventHandler, useState } from 'react';
-import { apiClint } from '../../../core/api/apiClient';
+import { apiClient } from '../../../core/api/apiClient';
 import { ToDo } from '../../../core/domain/todos.types';
 
 interface Props {
@@ -15,7 +15,7 @@ export const EditMode = ({ toDo, disableEditMode, refresh }: Props) => {
   };
 
   const handleSave = () => {
-    apiClint
+    apiClient
       .updateToDo({ ...toDo, content: value })
       .then(refresh)
       .then(disableEditMode);
