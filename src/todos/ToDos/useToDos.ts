@@ -22,6 +22,7 @@ const filterByFinished = (filterByStatus: ActiveFilterStatus) => {
   }
 };
 
+//zostawic tylko stan i efket do implementacji
 export const useToDos = ({ filterByContent, filterByStatus }: Params) => {
   const [allToDos, setAllToDos] = useState<ToDos | undefined>();
   const [filteredToDos, setFilteredToDos] = useState<ToDos>([]);

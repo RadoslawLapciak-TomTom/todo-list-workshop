@@ -7,6 +7,7 @@ export const ToDosPage = () => {
     <ToDosPageContainer>
       <ToDosHeader />
       <ToDos />
+      {/* implementacja bottom page */}
     </ToDosPageContainer>
   );
 };

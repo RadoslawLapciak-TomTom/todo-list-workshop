@@ -13,6 +13,7 @@ const jsonFetch = async (url: string, init?: RequestInit | undefined) => {
   });
 };
 
+//usunac usiwanie u update i filtrowanie
 export const apiClient = {
   fetchAllToDos: async (
     finished: boolean | undefined,
@@ -20,6 +21,7 @@ export const apiClient = {
     const url = `toDos${
       finished !== undefined ? `?finished=${finished}` : ''
     } `;
+
     const response = await jsonFetch(url);
     return await response.json();
   },
@@ -36,6 +38,7 @@ export const apiClient = {
       method: 'DELETE',
     });
   },
+
   updateToDo: async (toDo: ToDo) => {
     await jsonFetch(`toDos/${toDo.id}`, {
       method: 'PUT',
