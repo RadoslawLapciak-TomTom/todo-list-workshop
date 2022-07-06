@@ -1,0 +1,29 @@
+{
+  "toDos": [
+    {
+      "id": 1,
+      "content": "Example To Do list item",
+      "finished": false
+    },
+    {
+      "content": "test",
+      "finished": false,
+      "id": 2
+    },
+    {
+      "content": "test",
+      "finished": false,
+      "id": 3
+    },
+    {
+      "content": "test 2",
+      "finished": false,
+      "id": 4
+    },
+    {
+      "content": "test 2",
+      "finished": false,
+      "id": 5
+    }
+  ]
+}
