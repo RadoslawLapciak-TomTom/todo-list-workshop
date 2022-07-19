@@ -1,7 +1,5 @@
-import { ToDosPage } from './todos/ToDosPage';
-
 function App() {
-  return <ToDosPage />;
+  return <div>Hello world</div>;
 }
 
 export default App;
