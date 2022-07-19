@@ -1,20 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+const helloWorld = React.createElement('div', {}, 'hello world');
+
+const complexHelloWorld = React.createElement(
+  'div',
+  {
+    style: { background: 'grey', color: 'blue' },
+  },
+  'hello',
+  React.createElement('div', { style: { color: 'green' } }, 'world'),
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const complexHelloWorldTsx = (
+  <div style={{ background: 'grey', color: 'blue' }}>
+    hello<div style={{ color: 'green' }}>world</div>
+  </div>
+);
+
+root.render(helloWorld);
+
+const renderElement = (el: JSX.Element) => {
+  root.render(el);
+};
