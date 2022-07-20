@@ -66,8 +66,8 @@ const exhaustiveCheck = (_: never) => {
 
 const processUnion = (union: Union) => {
   console.log(union.type);
-  //   console.log(union.valA);
-  //   console.log(union.valB);
+  // console.log(union.valA);
+  // console.log(union.valB);
 
   switch (union.type) {
     case 'A': {
@@ -89,7 +89,7 @@ const getNumberOrNull = (): number | null =>
 
 const numOrNull: number | null = getNumberOrNull();
 
-// Math.floor(numOrNull); error
+// Math.floor(numOrNull); //error
 if (numOrNull) {
   console.log(Math.floor(numOrNull));
 }
