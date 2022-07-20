@@ -4,8 +4,8 @@
 // interface Props {
 //   filterByContent: string;
 //   setFilterByContent: (val: string) => void;
-//   filterByStatus: ActiveFilterStatus;
-//   setFilterByStatus: (status: ActiveFilterStatus) => void;
+//   filterByStatus: ToDosFilterStatus;
+//   setFilterByStatus: (status: ToDosFilterStatus) => void;
 //   className?: string;
 // }
 
